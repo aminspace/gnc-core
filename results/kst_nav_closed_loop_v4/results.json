@@ -1,0 +1,19 @@
+{
+  "run_id": "kst_nav_closed_loop_v4",
+  "model": "kst_nav_closed_loop_v4.slx",
+  "ticket": "KST-1",
+  "date": "2026-11-25",
+  "samples": 500,
+  "references": ["HX_KST01_DDJ_0009", "HX_KST01_SPC_0001"],
+  "changes": ["Added pulse-width thruster model", "Re-tuned cross-track gains"],
+  "metrics": [
+    {"name": "Delta-v mean", "value": 2.049, "unit": "m/s", "limit": 2.5, "pass": true},
+    {"name": "Delta-v 3-sigma", "value": 2.32, "unit": "m/s", "limit": 2.5, "pass": true},
+    {"name": "Miss distance 3-sigma", "value": 0.0767, "unit": "m", "limit": 0.1, "pass": true}
+  ],
+  "figures": [
+    {"file": "fig1_delta_v_dispersion.png", "caption": "Terminal approach delta-v dispersion, 500-sample Monte Carlo, against L2 limit (HX_KST01_SPC_0001)"},
+    {"file": "fig2_terminal_miss_distance.png", "caption": "Terminal miss distance per sample against L2 3-sigma limit (HX_KST01_SPC_0001)"}
+  ],
+  "status": "Pending review"
+}
